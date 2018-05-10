@@ -15,13 +15,73 @@ body {
     height: 10px;
 }
 
-.left {
+#container > img {
+    display: inline-block;
+    position: relative;
+    width: 240px;
+    height: 135px;
+}
+
+div.left {
     animation: slide-left-prop 1s ease 0s infinite;
 }
 
-.transform {
+div.transform {
     will-change: transform;
     animation: translate-x 1s ease 0s infinite;
+}
+
+img.left {
+    animation: carousel-left 2s ease infinite;
+}
+
+img.transform {
+    will-change: transform;
+    animation: carousel-translate 2s ease infinite;
+}
+
+@keyframes carousel-left {
+    from {
+        top: 0;
+    }
+
+    25% {
+      top: 300px;
+    }
+
+    50% {
+      top: 0;
+    }
+
+    75% {
+      top: -300px;
+    }
+
+    to {
+        top: 0;
+    }
+}
+
+@keyframes carousel-translate {
+    from {
+        transform: translateY(0);
+    }
+
+    25% {
+        transform: translateY(300px);
+    }
+
+    50% {
+        transform: translateY(0);
+    }
+
+    75% {
+        transform: translateY(-300px);
+    }
+
+    to {
+        transform: translateY(0);
+    }
 }
 
 @keyframes slide-left-prop {
