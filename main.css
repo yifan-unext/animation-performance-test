@@ -1,3 +1,7 @@
+body {
+    background-color: white;
+}
+
 #container, #title {
     margin: 0 100px;
 }
