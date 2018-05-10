@@ -1,0 +1,87 @@
+#container, #title {
+    margin: 0 100px;
+}
+
+#container > div {
+    display: inline-block;
+    position: relative;
+    margin: 1px;
+    background-color: red;
+    width: 10px;
+    height: 10px;
+}
+
+.left {
+    animation: slide-left-prop 1s ease 0s infinite;
+}
+
+.transform {
+    will-change: transform;
+    animation: translate-x 1s ease 0s infinite;
+}
+
+@keyframes slide-left-prop {
+    from {
+      left: 0;
+    }
+
+    25% {
+      left: 50px;
+    }
+
+    50% {
+      left: 0;
+    }
+
+    75% {
+      left: -50px;
+    }
+  
+    to {
+      left: 0;
+    }
+}
+
+@keyframes translate-3d {
+    from {
+      transform: translate3d(0, 0, 0);
+    }
+
+    25% {
+        transform: translate3d(50px, 0, 0);
+    }
+
+    50% {
+        transform: translate3d(0, 0, 0);
+    }
+
+    75% {
+        transform: translate3d(-50px, 0, 0);
+    }
+  
+    to {
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+@keyframes translate-x {
+    from {
+      transform: translateX(0);
+    }
+
+    25% {
+        transform: translateX(50px);
+    }
+
+    50% {
+        transform: translateX(0);
+    }
+
+    75% {
+        transform: translateX(-50px);
+    }
+  
+    to {
+        transform: translateX(0);
+    }
+}
